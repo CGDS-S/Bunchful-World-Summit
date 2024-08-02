@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+/* border: 1px dashed black; */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Product Sans", Sans-serif;;
+    font-style: normal;
+    font-weight: 100;
+     font-stretch: 100%;
+     font-display: swap;
+    src: url(https://fonts.gstatic.com/s/notosans/v36/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevttHOmDyw.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+header {
+    background-color: whitesmoke;
+    padding: 1em 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1em;
+}
+
+.logo {
+    max-height: 50px;
+    width: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+    position: relative;
+}
+
+nav ul li a {
+    color: #414141;
+    text-decoration: none;
+}
+
+nav ul li a::after {
+    content: ' ▼';
+    font-size: 0.8em;
+    transition: transform 0.3s;
+}
+
+nav ul li:hover > a::after {
+    content: ' ▼';
+    font-size: 0.8em;
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li {
+    margin: 0;
+}
+
+.dropdown-content li a {
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content li a:hover {
+    background-color: #5050F3;
+}
+.center{
+    justify-content: center;
+}
+.secondary-nav {
+    background-color: #24005E;
+    padding: .9em 0;
+}
+
+.secondary-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.secondary-nav ul li {
+    margin: 0 1em;
+}
+
+.secondary-nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.intro, .sdgs, .what-to-expect, .agenda {
+    text-align: center;
+}
+
+.intro h1, .sdgs h2, .what-to-expect h2, .agenda h2 {
+    margin-bottom: 1em;
+}
+
+
+.content-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 5rem;
+    margin-bottom: 6rem;
+    width: 100%; /* Ensure it takes the full width of the screen */
+    height: 50vh; /* Take the full height of the viewport */
+
+}
+
+.image-container, .text-container {
+    flex: 1; /* Ensure both containers take equal space */
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    width: 100%; /* Ensure the image takes up full width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-container h2 {
+    margin-top: 0;
+    font-size: 3em;
+}
+
+.text-container ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+    margin-top: 0.5em;
+}
+
+.text-container ul li {
+    margin-bottom: 0.5em;
+}
+
+.what-to-expect .expectations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.what-to-expect .expectations > div {
+    flex: 1 1 calc(50% - 2em);
+    max-width: calc(50% - 2em);
+    box-sizing: border-box;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+main {
+    padding: 2em;
+}
+
+
+
+.intro {
+    width: 100%;
+    text-align: center;
+    padding: 2em 0;
+    background-color: #f5f5f5; 
+    background: linear-gradient(to right, #FFEFD5, Pink,  #FFC0CB, #fadec5, Lavender, #FFEFD5);
+}
+
+.intro h6 {
+    margin: 0 0 1em;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.intro h1 {
+    margin: 0 0 1em;
+    font-size: 3rem;
+}
+
+.intro p {
+    max-width: 66em;
+    margin: 0 auto;
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 6rem;
+}
+
+.sdgs {
+    text-align: center;
+}
+
+.sdgs img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 300px;
+    display: block;
+    margin: 1em auto;
+}
+
+.expectations {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+
+.expectations div {
+    background: #f4f4f4;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+
+.agenda-details {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.agenda-details div {
+    flex: 1;
+    margin: 1em;
+    min-width: 200px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+footer form {
+    margin: 1em 0;
+}
+
+footer input {
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+footer button {
+    padding: 0.5em;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 1em;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th {
+    background-color: #4B0082; 
+    color: black;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+} 
